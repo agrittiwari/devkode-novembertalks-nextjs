@@ -7,7 +7,7 @@ export default  async(req, res) =>
         const createRecords = await table.create([{ fields:{description}}])
         const createdRecord = {
             id: createRecords[0].id,
-            fields: createRecords[0].description
+            fields: createRecords[0].fields
         }
     res.status(200).json(createdRecord)
     } catch (error) {
