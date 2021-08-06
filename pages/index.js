@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Navbar from '../Components/Navbar'
+import Todo from '../Components/Todo'
 import{table, minifyRecords} from './api/utils/Airtable'
 
 export default function Home({initialTodos}) {
@@ -16,9 +17,13 @@ export default function Home({initialTodos}) {
       
       <Navbar />
       <main >
-          <h1 className="container mx-auto my-10">hello world</h1>
-      </main>
-
+        <ul>
+          <h1 className="container mx-auto my-10">To do</h1>
+        {initialTodos.map(todo =>(<Todo key={todo.id} todo={todo}/>))}
+     
+        </ul>
+        
+ </main>
       
     </div>
   )
