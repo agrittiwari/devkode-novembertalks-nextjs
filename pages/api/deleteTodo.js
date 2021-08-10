@@ -2,7 +2,8 @@ import {table,minifyRecords} from './utils/Airtable'
 
 
 export default  async(req, res) =>
-{const{id} = req.body
+{
+    const { id } = req.body
     try {
         const deletedRecords = await table.destroy([ id ])
         const remainingRecords = minifyRecords(deletedRecords)

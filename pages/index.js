@@ -1,11 +1,21 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import { useEffect, useContext } from 'react'
 import Navbar from '../Components/Navbar'
 import Todo from '../Components/Todo'
+import { TodosContext } from '../contexts/TodosContext'
 import{table, minifyRecords} from './api/utils/Airtable'
 
-export default function Home({initialTodos}) {
-  console.log(initialTodos)
+const Home = ({ initialTodos }) =>
+{
+  const { todos, setTodos } = useContext(TodosContext)
+  
+  useEffect(() => {
+    setTodos(initialTodos)
+  }, [])
+
+  console.log(`here ${ initialTodos }`)
+  console.log(todos)
   return (
     <div >
       <Head>
@@ -17,9 +27,10 @@ export default function Home({initialTodos}) {
       
       <Navbar />
       <main >
+        <h1 className="container mx-auto my-10">To do</h1>
         <ul>
-          <h1 className="container mx-auto my-10">To do</h1>
-        {initialTodos.map(todo =>(<Todo key={todo.id} todo={todo}/>))}
+         
+        {todos && todos.map(todo =>(<Todo key={todo.id} todo={todo}/>))}
      
         </ul>
         
@@ -29,7 +40,7 @@ export default function Home({initialTodos}) {
   )
 }
 
-
+export default Home;
 //this function runs even before loading the above markup
 
 export async function getServerSideProps(context)
