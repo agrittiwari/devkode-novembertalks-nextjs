@@ -4,10 +4,11 @@ import { useEffect, useContext } from 'react'
 import Navbar from '../Components/Navbar'
 import Todo from '../Components/Todo'
 import { TodosContext } from '../contexts/TodosContext'
-import Auth0 from '@auth0/nextjs-auth0'
+import{getSession} from '@auth0/nextjs-auth0'
 import { table, minifyRecords } from './api/utils/Airtable'
 
 import { useUser } from '@auth0/nextjs-auth0';
+import TodoForm from '../Components/TodoForm'
 
 
 const Home = ({ initialTodos }) =>
@@ -26,14 +27,14 @@ const Home = ({ initialTodos }) =>
   // if (isLoading) return <div>Loading...</div>;
   // if (error) return <div>{error.message}</div>;
 
-  if (user) {
-   console.log(user)
-  } else {
-    console.log(`no user`)
- }
+//   if (user) {
+//    console.log(user)
+//   } else {
+//     console.log(user)
+//  }
  
 
-  // if (user) { }
+  
     return (
       <div>
        <Head>
@@ -43,16 +44,17 @@ const Home = ({ initialTodos }) =>
      
       </Head>
       
-        <Navbar/>
-      <main >
-        <h1 className="container mx-auto my-10">To do</h1>
+        <Navbar user= {user}/>
+     {user && <main >
+                 <TodoForm/>
           <ul>
+            <h1 className="text-2xl text-center mb-4">My todos</h1>
             {user && <p>Hello {user.given_name}</p>}
          
         {todos && todos.map(todo =>(<Todo key={todo.id} todo={todo}/>))}
      
           </ul>
-          </main>
+          </main> }
       </div>
     );
   
@@ -69,8 +71,9 @@ export default Home;
 //this function runs even before loading the above markup
 
 export async function getServerSideProps(context)
-
 {
+  const session = await getSession(context.req, context.res)
+  console.log(session)
   try {
     const todos = await table.select({}).firstPage()
     

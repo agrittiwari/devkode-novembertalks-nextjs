@@ -1,8 +1,12 @@
 import {table, minifyRecords} from './utils/Airtable'
+import { withApiAuthRequired } from '@auth0/nextjs-auth0'
 
 
-export default  async(req, res) =>
-{const{description} = req.body
+
+export default withApiAuthRequired(
+ async(req, res) =>
+    {
+        const { description } = req.body
     try {
         const createRecords = await table.create([{ fields:{description}}])
         const createdRecord = {
@@ -15,4 +19,5 @@ export default  async(req, res) =>
     res.status(500).json({msg:error.message})
     }
     
-}
+}   
+) 
