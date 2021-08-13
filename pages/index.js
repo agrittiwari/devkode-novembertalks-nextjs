@@ -54,7 +54,8 @@ const Home = ({ initialTodos }) =>
         {todos && todos.map(todo =>(<Todo key={todo.id} todo={todo}/>))}
      
           </ul>
-          </main> }
+        </main>}
+        {!user && <p>Please Login to manage your TODO</p>}
       </div>
     );
   
