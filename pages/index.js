@@ -74,12 +74,20 @@ export async function getServerSideProps(context)
 {
   const session = await getSession(context.req, context.res)
   console.log(session)
+
+  let todos=[]
   try {
-    const todos = await table.select({}).firstPage()
+    if (session?.user) {
+      todos = await table.select({
+       filterByFormula:`userId ='${session?.user.sub}'`
+     }).firstPage()
+  
+   }
     
   return {
     props: {
-      initialTodos: minifyRecords(todos)
+      initialTodos: minifyRecords(todos),
+      todoUser: session?.user || null
     }
   }
   } catch (err) {
