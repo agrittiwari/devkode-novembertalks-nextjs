@@ -10,7 +10,7 @@ const checkAuth = (handler) => withApiAuthRequired( async (req, res) =>
     try {
         
         const existingTodo = await table.find({ id })
-        console.log(`checkAuth running..`)
+        console.log(existingTodo + 'here')
         if (!existingTodo ||  user.sub !== existingTodo.fields.userId) {
             res.statusCode = 404
             return res.json({msg:'todo not found'})
