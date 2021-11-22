@@ -22,5 +22,10 @@ export default (req, res) => {
         email: 'hey@devkodeio',
         id: 2,
         name:'DEVkode'
-}])
+        },
+        {
+            email: 'sunnypuri@devkodeio',
+            id: 3,
+            name: 'Sanam Puri'
+    }])
 }
