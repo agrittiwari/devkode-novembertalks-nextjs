@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Form from '../Components/Form'
 import styles from '../styles/Home.module.css'
 
 export default function Home()
@@ -21,28 +22,7 @@ export default function Home()
       <h1 className="text-violet-500 text-2xl">Devkode: A frontend Community</h1>
       <span className="bg-green-500"> Community sharing Portal</span>
 
-      <div>
-        <h2>Join the membership</h2>
-        <form className="form ml-10 ">
-          <div className="flex flex-col text-cm mb-2">
-            <label className="font-bold mb-2 text-gray-800" htmlFor="name">Your Name</label>
-            <input type="text" className="w-80 rounded-lg appearance-none focus:border-gray-500 p-2" placeholder="your name" />
-            </div>
-          <div className="flex flex-col text-cm mb-2">
-          <label className="font-bold mb-2 text-gray-800" htmlFor="YoE">Years of Experience</label>
-        <input type="text" className="w-80 rounded-lg appearance-none focus:border-gray-500 p-2" placeholder="YOE" />
-        </div>
-          <div className="flex flex-col text-cm mb-2">
-          <label className="font-bold mb-2 text-gray-800" htmlFor="company">Your company</label>
-            <input type="text"className="w-80 rounded-lg appearance-none focus:border-gray-500 p-2" placeholder="currently working at.." />
-         <button type="submit"  className="rounded bg-orange-500">Join the list</button>
-          </div>
-          
-          </form>
-        
-        
-      </div>
-
+      <Form/>
       
     </div>
   )
