@@ -11,4 +11,4 @@
 
 
 
-### This repo specifically is built to showcase the structural advantages nextJS provides over MERN stack
+### This repo is specifically built to showcase the structural advantages nextJS provides over MERN stack
