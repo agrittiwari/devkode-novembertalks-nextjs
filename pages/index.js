@@ -13,11 +13,11 @@ export default function Home() {
         <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"></link>
       </Head>
       <div className={styles.grid}>
-        <Link href="/csr"><div className={styles.card}>
+        <Link href="/csr" passHref><div className={styles.card}>
           <p> Client Side Rendering</p></div></Link>
-          <Link href="/ssr"><div className={styles.card}>
+          <Link href="/ssr" passHref><div className={styles.card}>
           <p>Server side Rendering</p></div></Link>
-          <Link href="/ssg"><div className={styles.card}>
+          <Link href="/ssg" passHref><div className={styles.card}>
           <p>Static Side Generation</p>
         </div></Link>
 </div>
