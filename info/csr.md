@@ -2,6 +2,6 @@
 # Client Side Rendering
 
 
-|      Pros     |         Cons       |   Use Cases   |
-|   :-------:   |    :-----------:   |  :----------: |
-|               |                    |               |
+|              Pros             |         Cons              |        Use Cases          |
+|           :-------:           |    :-----------:          |       :----------:        |
+|                               |                           |                           |

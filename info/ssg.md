@@ -1,7 +1,6 @@
 
 # Static Side Generation
 
-
-|      Pros     |         Cons       |   Use Cases   |
-|   :-------:   |    :-----------:   |  :----------: |
-|               |                    |               |
+|              Pros             |         Cons              |        Use Cases          |
+|           :-------:           |    :-----------:          |       :----------:        |
+|                               |                           |                           |
