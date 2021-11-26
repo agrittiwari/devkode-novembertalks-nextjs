@@ -26,8 +26,9 @@ export default function Home() {
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
           target="_blank"
           rel="noopener noreferrer"
-        >
-          A Devkode member 🔥 
+        > <a href="https://www.agrittiwari.com">Agrit Tiwari</a>
+         <a href="https://wwww.twitter.com"> Follow me on Twitter <i class="fa fa-twitter" aria-hidden="true"></i></a>
+          A<a href="https://www.devkode.io"> Devkode</a> member 🔥 
           
         </a>
       </footer>
