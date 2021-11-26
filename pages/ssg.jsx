@@ -18,13 +18,14 @@ const ssg = ({ data}) => {
             <div className={styles.card }>
                 <Image
                     src={data.flags.png}
-      alt="INdian Flag"
+      alt="Indian Flag"
       width={200}
       height={200}
                 />
                 <h2>Neighbouring Nations of India</h2>
                     <p>{data.borders.map((border, index) => (<p key={index}>{border}</p>))}
-                    { console.log(data.borders)}</p>
+                    {/* {console.log(data.borders)} */}
+                </p>
                 </div>
                 </div>
     )
