@@ -31,7 +31,7 @@ function CSR () {
         <div className={styles.container}>
     <div className={styles.customgrid}>
         <h2 className={styles.card}>This is Client Side rendered</h2>
-        <Link href="/"><div className={styles.back}>
+        <Link href="/" prefetch={false}><div className={styles.back}>
         <p>Back to Home</p></div></Link>
             </div>
             {/* {console.log(`this is second log${data}`)} */}
