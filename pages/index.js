@@ -26,7 +26,7 @@ export default function Home() {
       <div className="back">
           <a href="https://www.agrittiwari.com">Agrit Tiwari&nbsp;</a></div>
           &nbsp;&nbsp;&nbsp;&nbsp;
-        <div className="back"><a href="https://www.twitter.com/agrit_tiwari"> Follow me on Twitter <i class="fa fa-twitter" aria-hidden="true"></i></a></div>
+        <div className="back"><a href="https://www.twitter.com/agrit_tiwari"> Follow me on Twitter <i className="fa fa-twitter" aria-hidden="true"></i></a></div>
         &nbsp;&nbsp;&nbsp;&nbsp;
         <div className="back">
           <a href="https://www.devkode.io"> A Devkodemember 🔥</a> 
