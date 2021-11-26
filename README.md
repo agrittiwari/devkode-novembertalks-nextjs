@@ -7,7 +7,7 @@
 > API Routes as an independent service, which is enabled through defining them as [Serverless Functions] (https://vercel.com/docs/concepts/functions/introduction#serverless-functions)
 
 
-
+When you hit that route it only loads that "js", rather than servingup the entire client side bundle on frontend, in nextJS, each one of these serverless functions are independent and smaller sizes.
 
 
 
