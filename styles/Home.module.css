@@ -112,6 +112,29 @@ transition: padding 0.15s ease;
   font-size: 1.25rem;
   line-height: 1.5;
 }
+.back{
+  height: auto;
+  width: 15%;
+  padding: 5px;
+  object-fit: contain;
+  background-color: rgb(161, 125, 32);
+  color:rgb(255, 255, 255);
+  border-radius: 10px;
+}
+.back:hover{
+  color: #a4b3c5;
+  border-color:#a4b3c5;
+  z-index:10;
+  text-decoration: underline; 
+  padding:10px;
+}
+.customgrid{
+  display: flex;
+   align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 900px;
+}
 
 .logo {
   height: 1em;

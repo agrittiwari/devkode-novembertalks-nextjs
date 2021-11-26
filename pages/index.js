@@ -1,6 +1,7 @@
 import Head from 'next/head'
 // import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -11,13 +12,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.grid}>
-        <div className={styles.card}>
-          <p> Client Side Rendering</p></div>
-        <div className={styles.card}>
-          <p>Server side Rendering</p></div>
-        <div className={styles.card}>
+        <Link href="/csr"><div className={styles.card}>
+          <p> Client Side Rendering</p></div></Link>
+          <Link href="/ssr"><div className={styles.card}>
+          <p>Server side Rendering</p></div></Link>
+          <Link href="/ssg"><div className={styles.card}>
           <p>Static Side Generation</p>
-        </div>
+        </div></Link>
 </div>
 
       <footer className={styles.footer}>
